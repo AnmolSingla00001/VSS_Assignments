@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment-2</title>
+
+  <style>
+    fieldset {
+      margin: auto;
+      width: 50%;
+      min-width: 400px;
+      border-radius: 6px;
+      background-color: darkslategrey;
+      color: mintcream;
+    }
+
+    .FieldClass {
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* .FieldContainer{
+          display: block;
+          margin-top: 10px;
+        } */
+
+    input[type="submit"] {
+      padding: 5px;
+      border-radius: 6px;
+      background-color: gray;
+      color: white;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+    .radio {
+      display: inline-flex;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 5px black(0, 0, 0, 0.25);
+      background-color: red;
+    }
+
+    .RB_Container {
+      display: inline-flex;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 5px black(0, 0, 0, 0.25);
+      background-color: red;
+    }
+
+    input[type="radio"]+label {
+      display: inline-flex;
+      margin: 0;
+      padding: 5px 14px;
+      font-size: 14px;
+      font-family: sans-serif;
+      color: white;
+      background-color: lightslategrey;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    input[type="radio"]+label:not(:last-of-type) {
+      border-right: 1px solid darkgray
+    }
+
+    input[type="radio"]:checked+label {
+      background: rgb(93, 107, 122);
+    }
+
+    .RB_Input {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <h1 style="margin-bottom: 0;">Register Today</h1>
+      <h4 style="margin-top: 0;">Fill in the detail below.</h4>
+      <div class: "FieldContainer">
+        <div class: "FieldClass">
+          <label for="ip_fullName">Full Name</label>
+        </div>
+        <div class: "FieldClass">
+          <input type="text" id="ip_fullName" placeholder="Enter your Full Name" style="width: 100%;" /><br />
+        </div>
+        <div class: "FieldClass" style="margin-top: 10px;">
+          <label for="ip_email">Email</label>
+        </div>
+        <div class: "FieldClass">
+          <input type="email" id="ip_email" placeholder="Enter your Email Address" style="width: 100%;" /><br />
+        </div>
+        <div class: "FieldClass" style="margin-top: 10px;">
+          <label for="ip_role">Role</label>
+        </div>
+        <div class: "FieldClass">
+          <select id="ip_role" style="width: 100%;">
+            <option value="">Select an option from below</option>
+            <option value="SU">Superuser</option>
+            <option value="Customer">Customer</option>
+            <option value="Seller">Seller</option>
+            <option value="Admin">Administrator</option>
+          </select><br />
+        </div>
+        <div class: "FieldClass" style="margin-top: 10px;">
+          <label for="ip_psd">Set a Password</label>
+        </div>
+        <div class: "FieldClass">
+          <input type="password" id="ip_psd" placeholder="Set your Password" style="width: 100%;" /><br />
+        </div>
+        <div class: "FieldClass" style="margin-top: 10px;">
+          <div class:"RB_Container" style="display: inline-flex; margin-top: 10px;">
+            <label>Gender:</label>
+          </div>
+          <div class: "FieldClass">
+            <div class:"radio" style="display: inline-flex;
+          overflow: hidden;
+          border-radius: 15px;
+          box-shadow: 0 0 5px black(0, 0, 0, 0.25);
+          background-color: red;">
+              <input type="radio" class="RB_Input" id="rb_gender_m" name="rb_gender" value="MALE" />
+              <label for="rb_gender_m" class="RB_Label">Male</label>
+              <input type="radio" class="RB_Input" id="rb_gender_f" name="rb_gender" value="FEMALE" />
+              <label for="rb_gender_f" class="RB_Label">Female</label>
+              <input type="radio" class="RB_Input" id="rb_gender_o" name="rb_gender" value="OTHERS" />
+              <label for="rb_gender_o" class="RB_Label">Others</label>
+            </div>
+          </div>
+        </div>
+
+        <div class: "FieldClass" style="margin-top: 10px;">
+          <div class:"CB_Class" style="display: inline-flex;">
+            <input type="checkbox" id="cb_agree" value="Agree" />
+            <label for="cb_agree">I confirm all the information is correct to the best of my
+              knowledge.</label>
+          </div>
+        </div>
+
+        <div class: "FieldClass" style="margin-top: 10px;text-align: center;">
+          <input type="submit" id="btn_register">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</body>
+
+</html>

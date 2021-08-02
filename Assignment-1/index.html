@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+      }
+      .block {
+        width: 100%;
+        background-color: black;
+        padding: 20px;
+        color: white;
+      }
+    </style>
+    <script>
+
+        var arr_ss = new Array();
+        var arr_ls = new Array();
+        var ol_ls;
+        var ol_ss;
+        
+
+        function fnOnLoad()
+        {
+            ol_ls = document.getElementById('ol_ls');
+            if (localStorage.getItem("lsEg") != null) {
+                    arr_ls = localStorage.getItem("lsEg").split(",");
+                    console.log(arr_ls);
+                }
+            arr_ls.forEach(element => {
+                    // ol_ls.append(element);
+                    ol_ls.appendChild((document.createElement('li')).appendChild(document.createTextNode(element)));
+                });
+
+            ol_ss = document.getElementById('ol_ss');
+            if (localStorage.getItem("ssEg") != null) {
+                    arr_ls = localStorage.getItem("ssEg").split(",");
+                    console.log(arr_ss);
+                }
+            arr_ss.forEach(element => {
+                    // ol_ss.appendChild(document.createTextNode(element));
+                    ol_ss.appendChild((document.createElement('li')).appendChild(document.createTextNode(element)));
+                });
+
+        }
+        function fnBtnAddLSItem(strItem)
+        {
+            arr_ls.push(strItem);
+            console.log(arr_ls);
+            localStorage.setItem("lsEg", arr_ls);
+
+            ol_ls.innerHTML = '';
+            arr_ls.forEach(element => {
+                ol_ls.appendChild((document.createElement('li')).appendChild(document.createTextNode(element)));
+            });
+        }
+        function fnBtnAddSSItem(strItem)
+        {
+            arr_ss.push(strItem);
+            console.log(arr_ss);
+            sessionStorage.setItem("ssEg", arr_ss);
+
+            ol_ss.innerHTML = '';
+            arr_ss.forEach(element => {
+                ol_ss.appendChild((document.createElement('li')).appendChild(document.createTextNode(element)));
+            });
+        }
+        function fnBtnDelLSItem()
+        {
+            localStorage.removeItem("lsEg");
+            ol_ls.innerHTML = '';
+            arr_ls = new Array();
+        }
+        function fnBtnDelSSItem()
+        {
+            sessionStorage.removeItem("ssEg");
+            ol_ss.innerHTML = '';
+            arr_ss = new Array();
+        }
+    </script>
+  </head>
+  <body onload="fnOnLoad()">
+    <div class="container">
+      <h1>Local Storage and Session Storage</h1>
+      <div class="block">
+        <h2>Local Storage</h2>
+        <input type="text" id="txt_ls" value="Item LS">
+        <button onclick="fnBtnAddLSItem(document.getElementById('txt_ls').value)">Add Local Storage Item</button>
+        <button onclick="fnBtnDelLSItem()">Delete Local Storage Item</button>
+        <br>
+        <ol id = ol_ls>
+        </ol>
+        <br>
+      </div>
+      <div class="block">
+        <h2>Session Storage</h2>
+        <input type="text" id="txt_ss" value="Item SS">
+        <button onclick="fnBtnAddSSItem(document.getElementById('txt_ss').value)">Add Session Storage Item</button>
+        <button onclick="fnBtnDelSSItem()">Delete Session Storage Item</button>
+        <br>
+        <ol id = ol_ss>
+        </ol>
+        <br>
+      </div>
+    </div>
+  </body>
+</html>
