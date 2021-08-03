@@ -1,0 +1,16 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  background: linear-gradient(to right, #725b5b, #301616);
+}
+
+h6 {
+  color: tomato;
+}
+
+p {
+  text-align: center;
+}
