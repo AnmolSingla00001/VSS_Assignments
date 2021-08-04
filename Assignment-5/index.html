@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+
+    <style>
+        body {
+            background-image: url(https://media.gettyimages.com/photos/face-of-the-person-who-modeled-in-lemon-picture-id539683861?s=612x612);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: slategray;
+        }
+
+        tr:nth-child(odd) {
+            background-color: steelblue;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Assignment - 5</h1>
+    <hr>
+    <h3>Images Practice</h3>
+    <div
+        style="background-image: url(https://thumbs.dreamstime.com/b/lemon-eyes-isolated-white-background-food-funny-faces-172725357.jpg); background-size: contain;">
+        You can specify background images<br>
+        for any visible HTML element.<br>
+        In this example, the background image<br>
+        is specified for a div element.<br>
+        By default, the background-image<br>
+        will repeat itself in the direction(s)<br>
+        where it is smaller than the element<br>
+        where it is specified. (Try resizing the<br>
+        browser window to see how the<br>
+        background image behaves.
+    </div>
+    <hr>
+    <picture>
+        <source media="(min-width:650px)"
+            srcset="http://www.scrolldroll.com/wp-content/uploads/2020/12/Narendra-Modi-Meme-Templates-Waah-Modi-Ji-Waah.jpg">
+        <source media="(min-width:450px)"
+            srcset="https://preview.redd.it/nzmypvhcs7w41.png?auto=webp&s=e34683a2a222928d54ca0e392c9c17dd45b72996">
+        <img src="https://media.gettyimages.com/photos/face-of-the-person-who-modeled-in-lemon-picture-id539683861?s=612x612"
+            style=" width: 300px;height: 300px;">
+    </picture>
+
+    <hr>
+    <h3>Tables Practice</h3>
+    <table style="width: 100%;">
+        <caption>Data Table</caption>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>CompanyName</th>
+        </tr>
+        <tr>
+            <td>Anmol</td>
+            <td>Singla</td>
+            <td>Infosys Ltd.</td>
+        </tr>
+        <tr>
+            <td colspan="2">Ankit Jain</td>
+            <td rowspan="2">Vidya Skill School</td>
+        </tr>
+        <tr>
+            <td colspan="2">Vibhor Pahare</td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Lists Practice</h3>
+    <h5>Ordered List</h5>
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ol>
+    <h5>Unordered List</h5>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>
+            <ol type="A" start="50">
+                <li>SubList Item 1</li>
+                <li>SubList Item 2</li>
+                <li>SubList Item 3</li>
+            </ol>
+        </li>
+    </ul>
+    <h5>Description List</h5>
+    <dl>
+        <dt>List Item 1</dt>
+        <dd>- Specifies First Item in the Description List</dd>
+        <dt>List Item 2</dt>
+        <dd>- Specifies Second Item in the Description List</dd>
+        <dt>List Item 3</dt>
+        <dd>- Specifies Third Item in the Description List</dd>
+    </dl>
+
+</body>
+
+</html>
