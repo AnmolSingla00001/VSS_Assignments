@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 6</title>
+
+    <script>
+        function fnBtnHomePg() {
+            document.getElementById("iframe_main").src = "https://www.inofficepay.com/";
+        }
+        function fnChangeBtnStyle() {
+            // let btn = document.getElementById("btnChgStyle");
+            let btn = document.getElementsByTagName("button");
+            console.log(btn);
+            console.log(typeof btn);
+            // btn.array.forEach(element => {
+            //     element.style.color = "white";
+            //     element.style.backgroundColor = "black";
+            // });
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].style.color = "white";
+                btn[i].style.backgroundColor = "black";
+                btn[i].style.marginTop = "5px";
+            }
+            document.getElementById("btnChgStyle").innerHTML = "Style Changed!";
+        }
+    </script>
+</head>
+
+<body>
+    <iframe src="https://www.inofficepay.com/" title="iFrame Example" width="50%" height="400px" style="border:none"
+        name="iframe_main" id="iframe_main"></iframe>
+    <br>
+    <a href="../Assignment-5/links.html" target="iframe_main">Visit Assignment-5 on the IFrame</a>
+    <br>
+    <a href="https://www.youtube.com/embed/0ew88RPjlK0" target="iframe_main">Visit educational video on the IFrame</a>
+    <br>
+    <button onclick="fnBtnHomePg()">Visit Homepage</button>
+    <br>
+    <button onclick="fnChangeBtnStyle()" id="btnChgStyle">Change Button Style</button>
+
+</body>
+
+</html>
