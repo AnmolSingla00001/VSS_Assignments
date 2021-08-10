@@ -1,0 +1,17 @@
+.header {
+  background-color: lightgray;
+  text-align: center;
+  padding: 10px;
+}
+.left {
+  float: left;
+}
+.left > a {
+  color: lightgreen;
+}
+a:hover {
+  color: lightslategray;
+}
+.left a:active {
+  color: black;
+}
