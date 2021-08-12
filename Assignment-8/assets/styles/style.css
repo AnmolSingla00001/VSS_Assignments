@@ -1,17 +1,39 @@
-.header {
+.header,
+.footer {
   background-color: lightgray;
   text-align: center;
   padding: 10px;
 }
-.left {
-  float: left;
+.left,
+.main,
+.right {
+  display: inline-block;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 20%;
+  height: 100%;
 }
+
+.main {
+  width: 50%;
+}
+
 .left > a {
-  color: lightgreen;
+  color: rgb(21, 85, 128);
+  display: block;
 }
 a:hover {
   color: lightslategray;
 }
 .left a:active {
   color: black;
+}
+.left button {
+  display: block;
+}
+
+.footer {
+  color: chocolate;
 }
