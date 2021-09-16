@@ -1,0 +1,12 @@
+{
+  "name": "flipkart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch ./assets/stylesheet/scss/main.scss ./assets/stylesheet/css/main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,40 @@
+@use "../base" as *;
+@use "../abstract/mixin" as *;
+@use "../layout/carousal";
+
+.carousal-container-slider {
+  position: relative;
+  width: 7680px;
+  animation: anim 20s ease 0s infinite;
+  display: flex;
+  & img {
+    margin-right: 225px;
+  }
+}
+
+@keyframes anim {
+  0% {
+    left: 0px;
+  }
+  20% {
+    left: 0px;
+  }
+  25% {
+    left: -1920px;
+  }
+  45% {
+    left: -1920px;
+  }
+  50% {
+    left: -3840px;
+  }
+  70% {
+    left: -3840px;
+  }
+  75% {
+    left: -5760px;
+  }
+  95% {
+    left: -5760px;
+  }
+}
