@@ -63,6 +63,12 @@ header nav .right-nav {
   align-items: center;
   width: 20%;
 }
+header nav .right-nav .hover-btn2 .login-btn,
+header nav .right-nav .hover-btn1 .login-btn {
+  background-color: white;
+  color: #2874f0;
+  padding: 7px 20px;
+}
 header nav .right-nav .hover-btn2:hover .svg-rotate,
 header nav .right-nav .hover-btn1:hover .svg-rotate {
   transform: rotate(90deg);
@@ -74,8 +80,8 @@ header nav .right-nav .list-items {
 header nav .right-nav .list-items .list-item-hover {
   display: none;
   position: absolute;
-  top: 25px;
-  transform: translateX(-40%);
+  top: 43px;
+  transform: translateX(-37%);
   background-color: #ffffff;
   width: 216px;
   max-height: 550px;
@@ -85,10 +91,10 @@ header nav .right-nav .list-items .list-item-hover {
 header nav .right-nav .list-items .list-item-hover .svg-arrow {
   fill: #ffffff;
   width: 24px;
-  height: 16px;
+  height: 24px;
   position: absolute;
-  top: -11px;
-  left: 40%;
+  top: -13px;
+  left: 50%;
 }
 header nav .right-nav .list-items .list-item-hover ul li {
   height: 18px;
@@ -103,9 +109,12 @@ header nav .right-nav .list-items .list-item-hover ul li .dropdown {
 }
 header nav .right-nav .list-items .list-item-hover ul li .dropdown .dropdown-new {
   font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }
 header nav .right-nav .list-items .list-item-hover ul li .dropdown .dropdown-new .signup {
-  margin-left: 30px;
   color: #2874f0;
 }
 header nav .right-nav .list-items .list-item-hover ul li .dropdown .dropdown-new .signup:hover {
