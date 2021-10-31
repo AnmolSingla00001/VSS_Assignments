@@ -1,0 +1,27 @@
+.section1-wrapper {
+  background-color: black;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1-wrapper .section1-container {
+  box-sizing: border-box;
+}
+.section1-wrapper .section1-container .grad-img {
+  opacity: 0.2;
+  position: fixed;
+  max-width: 95vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%) !important;
+}
+.section1-wrapper .section1-container .section1-logo {
+  display: block;
+}
+.section1-wrapper .section1-container .section1-logo img {
+  height: 90px;
+}
+
+/*# sourceMappingURL=main.css.map */
